@@ -4,7 +4,11 @@
   "description": "Boilerplate for static HTML/JS/SCSS projects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "start": "node index.js",
+      "build": "gulp build",
+      "watch": "gulp watch",
+      "clean": "rm -rf build",
+      "prepublish": "HOME=${OPENSHIFT_REPO_DIR}; npm run clean && npm run build"
   },
   "repository": {
     "type": "git",
